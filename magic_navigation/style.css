@@ -16,13 +16,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(--clr);
 }
 
 .navigation {
-    width: 400px;
-    height: 70px;
-    background: #fff;
+    width: 600px;
+    height: 100px;
+    background: #EEEEEE;
     position: relative;
     display: flex;
     justify-content: center;
@@ -32,13 +31,13 @@ body {
 
 .navigation ul {
     display: flex;
-    width: 350;
+    width: 800;
 }
 
 .navigation ul li {
     position: relative;
     list-style: none;
-    width: 70px;
+    width: 120px;
     height: 70px;
     z-index: 1;
 }
@@ -57,22 +56,22 @@ body {
 .navigation ul li a .icon {
     position: relative;
     display: block;
-    line-height: 75px;
-    font-size: 1.5em;
+    line-height: 90px;
+    font-size: 2.5em;
     text-align: center;
     transition: 0.5s;
     color: var(--clr);
 }
 
 .navigation ul li.active a .icon {
-    transform: translateY(-32px);
+    transform: translateY(-48px);
 }
 
 .navigation ul li a .text {
     position: absolute;
     color: var(--clr);
     font-weight: 400;
-    font-size: 0.75em;
+    font-size: 1em;
     letter-spacing: 0.05em;
     transition: 0.5s;
     opacity: 0;
@@ -87,10 +86,10 @@ body {
 .indicator {
     position: absolute;
     top: -50%;
-    width: 70px;
-    height: 70px;
-    background: #29fd53;
-    border: 5px solid var(--clr);
+    width: 100px;
+    height: 100px;
+    background: #EEEEEE;
+    border: 10px solid white;
     border-radius: 50%;
     transition: 0.3s;
 }
@@ -99,42 +98,38 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    left: -21px;
+    left: -24px;
     width: 20px;
     height: 20px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+    box-shadow: 0px -10px 0 0 white;
 }
 
 .indicator::after {
     content: '';
     position: absolute;
     top: 50%;
-    right: -21px;
+    right: -24px;
     width: 20px;
     height: 20px;
     background: transparent;
     border-top-left-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+    box-shadow: 0px -10px 0 0 white;
 }
 
 .navigation ul li:nth-child(1).active~.indicator {
-    transform: translateX(calc(70px * 0));
+    transform: translateX(calc(120px * 0 + 10px));
 }
 
 .navigation ul li:nth-child(2).active~.indicator {
-    transform: translateX(calc(70px * 1));
+    transform: translateX(calc(120px * 1 + 10px));
 }
 
 .navigation ul li:nth-child(3).active~.indicator {
-    transform: translateX(calc(70px * 2));
+    transform: translateX(calc(120px * 2 + 10px));
 }
 
 .navigation ul li:nth-child(4).active~.indicator {
-    transform: translateX(calc(70px * 3));
-}
-
-.navigation ul li:nth-child(5).active~.indicator {
-    transform: translateX(calc(70px * 4));
+    transform: translateX(calc(120px * 3 + 10px));
 }
