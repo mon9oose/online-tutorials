@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Mario Matching Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Mario Matching Game</h2>
+    <div class="box">
+        <label>
+            <input type="checkbox" class="checkbox" id="chk1">
+            <i></i>
+        </label>
+        <label>
+            <input type="checkbox" class="checkbox" id="chk2">
+            <i></i>
+        </label>
+        <label>
+            <input type="checkbox" class="checkbox" id="chk3">
+            <i></i>
+        </label>
+    </div>
+    <button class="reset">
+        Reset Game
+    </button>
+    <script>
+        const chk1 = document.querySelector('#chk1');
+        const chk2 = document.querySelector('#chk2');
+        const chk3 = document.querySelector('#chk3');
+
+        chk1.onclick = () => {
+            if (chk1.checked === true) { chk1.disabled = true; }
+        }
+        chk2.onclick = () => {
+            if (chk2.checked === true) { chk2.disabled = true; }
+        }
+        chk3.onclick = () => {
+            if (chk3.checked === true) { chk3.disabled = true; }
+        }
+
+        const reset = document.querySelector('.reset');
+        reset.onclick = () => {
+            chk1.disabled = false;
+            chk1.checked = false;
+            chk2.disabled = false;
+            chk2.checked = false;
+            chk3.disabled = false;
+            chk3.checked = false;
+        }
+    </script>
+</body>
+
+</html>
