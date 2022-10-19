@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Validation Check</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,50 +34,50 @@
         const numberCase = document.getElementById('number');
         const specialCase = document.getElementById('special');
         const lengthCase = document.getElementById('length');
-        
+
         // javascript regular expression pattern data
         const checkLower = new RegExp('(?=.*[a-z])');
         const checkUpper = new RegExp('(?=.*[A-Z])');
         const checkNumber = new RegExp('(?=.*[0-9])');
         const checkSpecial = new RegExp('(?=.*[!@#\$\%^&\*])');
         const checkLength = new RegExp('(?=.{8,})');
-        
+
         // check logic ( triggered by input box key up )
         pswrdObject.onkeyup = () => {
             const data = pswrdObject.value;
-            if(checkLower.test(data)) {
+            if (checkLower.test(data)) {
                 lowerCase.classList.add('valid');
             } else {
                 lowerCase.classList.remove('valid');
             }
 
-            if(checkUpper.test(data)) {
+            if (checkUpper.test(data)) {
                 upperCase.classList.add('valid');
             } else {
                 upperCase.classList.remove('valid');
             }
 
-            if(checkNumber.test(data)) {
+            if (checkNumber.test(data)) {
                 numberCase.classList.add('valid');
             } else {
                 numberCase.classList.remove('valid');
             }
 
-            if(checkSpecial.test(data)) {
+            if (checkSpecial.test(data)) {
                 specialCase.classList.add('valid');
             } else {
                 specialCase.classList.remove('valid');
             }
 
-            if(checkLength.test(data)) {
+            if (checkLength.test(data)) {
                 lengthCase.classList.add('valid');
             } else {
                 lengthCase.classList.remove('valid');
-            }            
+            }
         }
 
         toggleBtn.onclick = () => {
-            if(pswrdObject.type === 'password') {
+            if (pswrdObject.type === 'password') {
                 pswrdObject.setAttribute('type', 'text');
                 toggleBtn.classList.add('hide');
             } else {
